@@ -1,0 +1,60 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+---
+description: 该规则解释了 Gradio 机器学习模型部署和客户端调用的约定和最佳实践。
+globs: **/*.py
+alwaysApply: false
+---
+
+# Gradio 规则
+
+## 客户端使用规范
+
+- 使用 `gradio_client` 库而非完整的 `gradio` 包以获得更轻量级的体验
+- 安装命令：`pip install gradio_client`
+- 使用 `Client` 类连接到 Gradio 应用：`client = Client("app_url")`
+
+## API 调用规范
+
+- 使用 `client.predict()` 进行阻塞式 API 调用，直接获取结果
+- 使用 `client.submit()` 进行非阻塞式调用，返回 Job 对象用于后台处理
+- 文件参数使用 `file()` 函数包装：`file("path/to/file")`
+- API 调用时使用与原应用相同的关键字参数名称
+
+## 流式处理规范
+
+- 对于流式输出，使用 `submit()` 方法并迭代结果：
+```python
+for result in client.submit("prompt"):
+    print(result)
+```
+
+## 错误处理规范
+
+- 确保上游应用设置 `show_error=True` 或使用 `gr.Error` 异常
+- 客户端会抛出与上游应用相同的异常
+- 使用适当的异常处理机制捕获和处理错误
+
+## 作业管理规范
+
+- 使用 `job.status()` 检查作业状态和队列位置
+- 使用 `job.done()` 检查作业是否完成
+- 支持作业取消和队列状态监控
+- 在长时间运行的任务中定期检查作业状态
+
+## 部署和集成规范
+
+- 客户端可在任何 Python 环境中运行（包括 Flask、Django 等）
+- 支持 Hugging Face Spaces 以及自定义服务器
+- 在生产环境中使用时考虑认证和安全性
+- 使用合适的超时设置避免长时间阻塞
+
+## 最佳实践
+
+- 对于生产应用，使用非阻塞的 `submit()` 方法
+- 实现适当的重试机制处理网络问题
+- 在多线程环境中注意客户端的线程安全性
+- 缓存客户端实例避免重复连接开销

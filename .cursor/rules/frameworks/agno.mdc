@@ -1,0 +1,87 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+---
+description: 该规则解释了 Agno 多智能体系统框架的约定和最佳实践。
+globs: **/*.py
+alwaysApply: false
+---
+
+# Agno 规则
+
+## 基础概念
+
+- Agno 是用于构建多智能体系统的 Python 框架，支持共享内存、知识和推理
+- 支持5个级别的智能体构建：工具智能体、知识智能体、记忆智能体、团队智能体、工作流智能体
+
+## 智能体构建规范
+
+- 使用 `Agent` 类创建基础智能体：`Agent(model=model, tools=tools, instructions="...")`
+- 为复杂任务使用推理智能体，导入 `ReasoningTools(add_instructions=True)`
+- 所有智能体都应设置清晰的 `instructions` 参数
+- 使用 `markdown=True` 参数启用 Markdown 格式输出
+
+## 模型使用规范
+
+- 框架支持23+模型提供商，使用统一接口避免供应商锁定
+- 导入特定模型：`from agno.models.anthropic import Claude`
+- 推荐使用最新的推理模型如 `Claude(id="claude-sonnet-4-20250514")`
+- 根据任务需求选择合适的模型提供商
+
+## 工具集成规范
+
+- 使用 `tools` 参数为智能体添加功能：`tools=[ReasoningTools(), YFinanceTools()]`
+- 工具导入格式：`from agno.tools.toolname import ToolClass`
+- 为工具指定具体功能参数，如 `YFinanceTools(stock_price=True, analyst_recommendations=True)`
+- 优先使用内置工具，避免重复实现
+
+## 团队协作规范
+
+- 使用 `Agent Teams` 构建多智能体协作系统
+- 团队智能体支持推理、记忆和共享上下文
+- 为团队设置明确的角色分工和协作机制
+- 实现智能体间的有效通信和状态共享
+
+## 知识和记忆规范
+
+- 使用内置的 `Storage` 和 `Memory` 驱动为智能体提供长期记忆
+- 集成20+向量数据库实现智能体搜索功能
+- 使用异步高性能的 Agentic RAG 进行知识检索
+- 为智能体提供领域特定知识库
+
+## 结构化输出规范
+
+- 使用模型提供的结构化输出或 `json_mode` 返回类型化响应
+- 智能体原生支持多模态：文本、图像、音频、视频输入输出
+- 使用表格格式展示数据：`instructions="Use tables to display data."`
+
+## 工作流规范
+
+- 使用 Agentic Workflows 构建确定性、有状态的多智能体工作流
+- 工作流支持状态管理和流程控制
+- 实现工作流的可监控和可调试性
+
+## 部署和监控规范
+
+- 使用预构建的 FastAPI 路由快速部署智能体服务
+- 在 agno.com 平台监控智能体会话和性能
+- 使用 Playground 进行智能体测试和调试
+- 实现智能体的评估和持续改进
+
+## 性能优化规范
+
+- 智能体实例化时间约3μs，内存使用约6.5Kib
+- 优先使用异步操作提高性能
+- 合理配置智能体的内存和存储参数
+- 使用缓存机制优化重复操作
+
+## 最佳实践
+
+- 从简单的工具智能体开始，逐步构建复杂系统
+- 为智能体设置清晰的指令和角色定义
+- 使用推理功能提高智能体的可靠性
+- 实现适当的错误处理和异常管理
+- 定期评估和优化智能体性能
+- 使用监控工具跟踪智能体行为和效果
