@@ -59,6 +59,10 @@ cd meme_generator_agent
 uv pip install -r requirements.txt
 playwright install chromium --with-deps  # 安装浏览器驱动
 
+# AI网页爬虫
+cd ai_web_scrapping
+uv pip install streamlit scrapegraphai
+
 # 或使用传统 pip（在虚拟环境中）
 pip install -r requirements.txt
 ```
@@ -95,6 +99,28 @@ playwright install chromium --with-deps
 streamlit run ai_meme_generator_agent.py
 ```
 
+### 🕷️ [AI网页爬虫](./ai_web_scrapping/README.md)
+
+基于 ScrapegraphAI + Streamlit 构建的智能网页爬虫工具，通过自然语言描述自动提取网页内容。
+
+**技术栈**：
+- **ScrapegraphAI**: AI驱动的网页爬虫框架
+- **DeepSeek**: 大语言模型支持
+- **Streamlit**: 现代化Web UI框架
+
+**功能特点**：
+- 🤖 **AI智能理解**：支持自然语言描述爬取需求
+- 🌐 **智能内容提取**：自动识别和提取网页关键信息
+- 🎯 **精准定位**：根据用户提示精确定位目标内容
+- 🖥️ **简洁界面**：基于Streamlit的用户友好界面
+
+**快速体验**：
+```bash
+cd ai_web_scrapping
+pip install streamlit scrapegraphai
+streamlit run ai_web_scrapping.py
+```
+
 ## 项目结构
 
 ```
@@ -106,10 +132,13 @@ llm-agent-study/
 │   ├── README.md
 │   ├── requirements.txt
 │   └── *.py
-└── meme_generator_agent/  # AI表情包生成器
+├── meme_generator_agent/  # AI表情包生成器
+│   ├── README.md
+│   ├── requirements.txt
+│   └── ai_meme_generator_agent.py  # 主程序（Streamlit版本）
+└── ai_web_scrapping/     # AI网页爬虫
     ├── README.md
-    ├── requirements.txt
-    └── ai_meme_generator_agent.py  # 主程序（Streamlit版本）
+    └── ai_web_scrapping.py  # 主程序
 ```
 
 ## 开发指南
