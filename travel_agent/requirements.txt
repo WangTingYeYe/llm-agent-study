@@ -1,0 +1,24 @@
+# AI 框架
+agno>=0.1.0
+gradio>=4.0.0
+
+# 模型提供商
+openai>=1.0.0
+
+# 搜索工具
+baidusearch>=0.1.0
+pycountry>=22.3.5
+
+# 数据处理
+pandas>=2.0.0
+numpy>=1.24.0
+
+# 网络请求
+requests>=2.28.0
+httpx>=0.24.0
+
+# 环境变量管理
+python-dotenv>=1.0.0
+
+# 类型提示
+typing-extensions>=4.0.0 
