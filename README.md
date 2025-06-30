@@ -63,6 +63,10 @@ playwright install chromium --with-deps  # 安装浏览器驱动
 cd ai_web_scrapping
 uv pip install streamlit scrapegraphai
 
+# AI数据分析智能体
+cd data_analysis_agent
+uv pip install -r requirements.txt
+
 # 或使用传统 pip（在虚拟环境中）
 pip install -r requirements.txt
 ```
@@ -81,6 +85,10 @@ pip install -r requirements.txt
 
 基于 ScrapegraphAI + Streamlit 构建的智能网页爬虫工具，通过自然语言描述自动提取网页内容。
 
+### 📊 [AI数据分析智能体](./data_analysis_agent/README.md)
+
+基于 Streamlit 和 Agno 构建的 AI 数据分析智能体，支持 Excel 和 CSV 文件上传，使用 DeepSeek 模型进行数据分析。提供 Pandas 和 DuckDB 两个版本，满足不同复杂度的数据分析需求。
+
 ## 项目结构
 
 ```
@@ -96,6 +104,11 @@ llm-agent-study/
 │   ├── README.md
 │   ├── requirements.txt
 │   └── ai_meme_generator_agent.py  # 主程序（Streamlit版本）
+├── data_analysis_agent/  # AI数据分析智能体
+│   ├── README.md
+│   ├── requirements.txt
+│   ├── app.py            # Pandas版本主程序
+│   └── app_duckdb.py     # DuckDB版本主程序
 └── ai_web_scrapping/     # AI网页爬虫
     ├── README.md
     └── ai_web_scrapping.py  # 主程序
