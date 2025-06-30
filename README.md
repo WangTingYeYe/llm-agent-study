@@ -67,6 +67,10 @@ uv pip install streamlit scrapegraphai
 cd data_analysis_agent
 uv pip install -r requirements.txt
 
+# AI金融分析团队
+cd ai_finance_agent_team
+uv pip install -r requirements.txt
+
 # 或使用传统 pip（在虚拟环境中）
 pip install -r requirements.txt
 ```
@@ -89,6 +93,10 @@ pip install -r requirements.txt
 
 基于 Streamlit 和 Agno 构建的 AI 数据分析智能体，支持 Excel 和 CSV 文件上传，使用 DeepSeek 模型进行数据分析。提供 Pandas 和 DuckDB 两个版本，满足不同复杂度的数据分析需求。
 
+### 💰 [AI金融分析团队](./ai_finance_agent_team/README.md)
+
+基于 Agno 多 Agent 系统和 Streamlit 的智能金融分析平台，使用阿里云通义千问提供强大的中文金融分析能力。Web Agent 负责搜索最新新闻，Finance Agent 负责财务数据分析，两个 Agent 协同工作生成全面的投资研究报告。
+
 ## 项目结构
 
 ```
@@ -109,9 +117,14 @@ llm-agent-study/
 │   ├── requirements.txt
 │   ├── app.py            # Pandas版本主程序
 │   └── app_duckdb.py     # DuckDB版本主程序
-└── ai_web_scrapping/     # AI网页爬虫
+├── ai_web_scrapping/     # AI网页爬虫
+│   ├── README.md
+│   └── ai_web_scrapping.py  # 主程序
+└── ai_finance_agent_team/  # AI金融分析团队
     ├── README.md
-    └── ai_web_scrapping.py  # 主程序
+    ├── requirements.txt
+    ├── agent_team.py        # 核心 Agent 团队逻辑
+    └── streamlit_app.py     # Streamlit Web 界面
 ```
 
 ## 开发指南

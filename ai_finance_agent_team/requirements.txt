@@ -1,0 +1,25 @@
+# AI Finance Agent Team Dependencies
+
+# Core framework
+agno>=1.7.0
+
+# Streamlit for web interface
+streamlit>=1.28.0
+
+# Data visualization
+plotly>=5.15.0
+pandas>=2.0.0
+
+# Additional utilities
+python-dotenv>=1.0.0
+requests>=2.31.0
+
+# Optional: for better performance
+streamlit-aggrid>=0.3.4
+streamlit-option-menu>=0.3.6
+
+plotly
+
+duckduckgo-search
+
+yfinance

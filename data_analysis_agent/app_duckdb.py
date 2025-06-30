@@ -140,32 +140,29 @@ def main():
                                 markdown=True,
                                 instructions=f"""你是一个专业的数据分析师，擅长使用 SQL 查询分析数据。
 
-用户上传了一个名为 '{uploaded_file.name}' 的文件，文件路径为: {file_path}
-该文件已经可以通过 DuckDB 访问，表名为: '{table_name}'
+                                                用户上传了一个名为 '{uploaded_file.name}' 的文件，文件路径为: {file_path}
+                                                该文件已经可以通过 DuckDB 访问，表名为: '{table_name}'
 
-请根据用户的问题进行数据分析：
-1. 如果用户问的是自然语言问题，请先理解用户需求，然后编写合适的SQL查询
-2. 如果用户直接提供SQL查询，请执行并分析结果
-3. 请提供清晰的分析结果和见解
-4. 如果需要，可以提供多个SQL查询来全面分析数据
+                                                请根据用户的问题进行数据分析：
+                                                1. 如果用户问的是自然语言问题，请先理解用户需求，然后编写合适的SQL查询
+                                                2. 如果用户直接提供SQL查询，请执行并分析结果
+                                                3. 请提供清晰的分析结果和见解
+                                                4. 如果需要，可以提供多个SQL查询来全面分析数据
 
-文件列信息：
-{df.columns.tolist()}
+                                                文件列信息：
+                                                {df.columns.tolist()}
 
-数据类型：
-{df.dtypes.to_dict()}
+                                                数据类型：
+                                                {df.dtypes.to_dict()}
 """,
                                 debug_mode=True,
                             )
 
                             # 构建完整的 prompt
                             prompt = f"""
-请分析位于 '{file_path}' 的数据文件，表名为 '{table_name}'。
-
-用户问题: {question}
-
-请使用 DuckDB SQL 查询来分析数据并回答用户的问题。
-"""
+                                        请分析位于 '{file_path}' 的数据文件，表名为 '{table_name}'。
+                                        用户问题: {question}
+                                        请使用 DuckDB SQL 查询来分析数据并回答用户的问题。"""
 
                             # 运行 Agent 并获取回复
                             response = agent.run(prompt)
