@@ -26,7 +26,7 @@ async def generate_meme(query: str, model_choice: str, api_key: str) -> None:
         "3. Click on the 'Search' button search it\n"
         "4. Choose any meme template that metaphorically fits the meme topic: '{0}'\n"
         "   by clicking on the 'Add Caption' button below it\n"
-        "5. Write a Top Text (setup/context) and Bottom Text (punchline/outcome) related to '{0}'.\n" 
+        "5. Write a Top Text (setup/context) and Bottom Text (punchline/outcome) related to '{0}'.\n"
         "6. Check the preview making sure it is funny and a meaningful meme. Adjust text directly if needed. \n"
         "7. Look at the meme and text on it, if it doesnt make sense, PLEASE retry by filling the text boxes with different text. \n"
         "8. Click on the Generate meme button to generate the meme\n"

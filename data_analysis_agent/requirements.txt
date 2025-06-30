@@ -1,0 +1,7 @@
+streamlit
+agno
+pandas
+openpyxl
+dashscope
+openai
+duckdb

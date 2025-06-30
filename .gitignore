@@ -157,3 +157,6 @@ model_cache/
 # Project outputs
 output/
 exports/ 
+
+# YoYo AI version control directory
+.yoyo/

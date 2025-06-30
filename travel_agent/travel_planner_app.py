@@ -1,16 +1,16 @@
 import os
+from browser_use import Agent
 import gradio as gr
 from textwrap import dedent
 from typing import Optional, Tuple
 
-from agno.agent import Agent
 from agno.models.deepseek import DeepSeek
 from agno.tools.baidusearch import BaiduSearchTools
 
 class TravelPlannerApp:
     """旅行规划助手应用"""
-    
     def __init__(self):
+    
         self.travel_agent: Optional[Agent] = None
     
     def create_travel_agent(self, deepseek_api_key: str) -> Agent:
