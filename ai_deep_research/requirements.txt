@@ -1,0 +1,8 @@
+streamlit
+agno
+openai
+firecrawl-py
+python-dotenv
+requests
+asyncio
+typing-extensions

@@ -71,6 +71,10 @@ uv pip install -r requirements.txt
 cd ai_finance_agent_team
 uv pip install -r requirements.txt
 
+# AI深度研究助手
+cd ai_deep_research
+uv pip install -r requirements.txt
+
 # 或使用传统 pip（在虚拟环境中）
 pip install -r requirements.txt
 ```
@@ -97,6 +101,10 @@ pip install -r requirements.txt
 
 基于 Agno 多 Agent 系统和 Streamlit 的智能金融分析平台，使用阿里云通义千问提供强大的中文金融分析能力。Web Agent 负责搜索最新新闻，Finance Agent 负责财务数据分析，两个 Agent 协同工作生成全面的投资研究报告。
 
+### 🔬 [AI深度研究助手](./ai_deep_research/README.md)
+
+基于 Qwen API 和 Agno 框架的智能研究分析平台，集成深度网络研究和内容阐述功能。使用 Firecrawl 进行全面的网络信息收集，支持参数化配置（深度、时间、URL数量），提供 Research Agent 和 Elaboration Agent 双重智能体协同工作，生成专业的研究报告和深度分析。
+
 ## 项目结构
 
 ```
@@ -120,11 +128,17 @@ llm-agent-study/
 ├── ai_web_scrapping/     # AI网页爬虫
 │   ├── README.md
 │   └── ai_web_scrapping.py  # 主程序
-└── ai_finance_agent_team/  # AI金融分析团队
+├── ai_finance_agent_team/  # AI金融分析团队
+│   ├── README.md
+│   ├── requirements.txt
+│   ├── agent_team.py        # 核心 Agent 团队逻辑
+│   └── streamlit_app.py     # Streamlit Web 界面
+└── ai_deep_research/       # AI深度研究助手
     ├── README.md
     ├── requirements.txt
-    ├── agent_team.py        # 核心 Agent 团队逻辑
-    └── streamlit_app.py     # Streamlit Web 界面
+    ├── agent.py            # 深度研究工具
+    ├── streamlit_app.py    # Streamlit 主应用
+    └── run.sh              # 启动脚本
 ```
 
 ## 开发指南
