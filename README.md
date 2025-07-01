@@ -75,6 +75,10 @@ uv pip install -r requirements.txt
 cd ai_deep_research
 uv pip install -r requirements.txt
 
+# AI分手治愈助手
+cd ai_breakup_recovery_agent
+uv pip install -r requirements.txt
+
 # 或使用传统 pip（在虚拟环境中）
 pip install -r requirements.txt
 ```
@@ -105,6 +109,10 @@ pip install -r requirements.txt
 
 基于 Qwen API 和 Agno 框架的智能研究分析平台，集成深度网络研究和内容阐述功能。使用 Firecrawl 进行全面的网络信息收集，支持参数化配置（深度、时间、URL数量），提供 Research Agent 和 Elaboration Agent 双重智能体协同工作，生成专业的研究报告和深度分析。
 
+### 💔 [AI分手治愈助手](./ai_breakup_recovery_agent/README.md)
+
+基于 Agno 和 Streamlit 构建的智能分手治愈助手，使用阿里云通义千问 Qwen Omni 模型提供全方位的分手恢复支持。通过四个专业的AI代理（情感支持、结束指导、恢复计划、客观建议）协同工作，为用户提供温暖贴心的分手恢复方案，支持流式响应和多模态输入。
+
 ## 项目结构
 
 ```
@@ -133,12 +141,16 @@ llm-agent-study/
 │   ├── requirements.txt
 │   ├── agent_team.py        # 核心 Agent 团队逻辑
 │   └── streamlit_app.py     # Streamlit Web 界面
-└── ai_deep_research/       # AI深度研究助手
+├── ai_deep_research/       # AI深度研究助手
+│   ├── README.md
+│   ├── requirements.txt
+│   ├── agent.py            # 深度研究工具
+│   ├── streamlit_app.py    # Streamlit 主应用
+│   └── run.sh              # 启动脚本
+└── ai_breakup_recovery_agent/  # AI分手治愈助手
     ├── README.md
     ├── requirements.txt
-    ├── agent.py            # 深度研究工具
-    ├── streamlit_app.py    # Streamlit 主应用
-    └── run.sh              # 启动脚本
+    └── ai_breakup_recovery_agent.py  # 主程序文件
 ```
 
 ## 开发指南
