@@ -79,6 +79,14 @@ uv pip install -r requirements.txt
 cd ai_breakup_recovery_agent
 uv pip install -r requirements.txt
 
+# AI博客转播客代理
+cd ai_blog_to_podcast_agent
+uv pip install -r requirements.txt
+
+# AI国际象棋代理
+cd ai_chess_agent
+uv pip install -r requirements.txt
+
 # 或使用传统 pip（在虚拟环境中）
 pip install -r requirements.txt
 ```
@@ -112,6 +120,14 @@ pip install -r requirements.txt
 ### 💔 [AI分手治愈助手](./ai_breakup_recovery_agent/README.md)
 
 基于 Agno 和 Streamlit 构建的智能分手治愈助手，使用阿里云通义千问 Qwen Omni 模型提供全方位的分手恢复支持。通过四个专业的AI代理（情感支持、结束指导、恢复计划、客观建议）协同工作，为用户提供温暖贴心的分手恢复方案，支持流式响应和多模态输入。
+
+### 🎙️ [AI博客转播客代理](./ai_blog_to_podcast_agent/README.md)
+
+基于 Agno + Streamlit 构建的智能播客生成器，使用阿里云通义千问和 ElevenLabs 语音合成技术。通过 Firecrawl 抓取博客内容，AI 智能总结并转换为自然流畅的播客音频，支持多语言语音合成，让文字内容瞬间变成可听的播客节目。
+
+### ♟️ [AI国际象棋代理](./ai_chess_agent/README.md)
+
+基于 AutoGen + Streamlit 构建的智能国际象棋对战系统，使用阿里云通义千问驱动两个AI代理进行自主对战。Agent White 和 Agent Black 通过 Game Master 协调，自动分析棋局、规划策略并执行移动，展示多代理协作在复杂策略游戏中的应用，支持完整的对局记录和可视化。
 
 ## 项目结构
 
@@ -147,10 +163,16 @@ llm-agent-study/
 │   ├── agent.py            # 深度研究工具
 │   ├── streamlit_app.py    # Streamlit 主应用
 │   └── run.sh              # 启动脚本
-└── ai_breakup_recovery_agent/  # AI分手治愈助手
-    ├── README.md
+├── ai_breakup_recovery_agent/  # AI分手治愈助手
+│   ├── README.md
+│   ├── requirements.txt
+│   └── ai_breakup_recovery_agent.py  # 主程序文件
+├── ai_blog_to_podcast_agent/  # AI博客转播客代理
+│   ├── requirements.txt
+│   └── blog_to_podcast_agent.py      # 主程序文件（Streamlit版本）
+└── ai_chess_agent/            # AI国际象棋代理
     ├── requirements.txt
-    └── ai_breakup_recovery_agent.py  # 主程序文件
+    └── ai_chess_agent.py             # 主程序文件（AutoGen + Streamlit）
 ```
 
 ## 开发指南
