@@ -1,0 +1,8 @@
+streamlit
+agno
+openai
+langchain-community
+asyncio
+pydantic
+browser-use==0.1.26
+playwright==1.49.1 

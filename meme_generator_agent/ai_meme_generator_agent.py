@@ -4,6 +4,9 @@ import streamlit as st
 from browser_use import Agent
 from langchain_openai import ChatOpenAI
 
+import os
+os.environ["ANONYMIZED_TELEMETRY"] = "false"
+
 
 async def generate_meme(query: str, model_choice: str, api_key: str) -> None:
     if not api_key or not api_key.strip():
@@ -11,8 +14,8 @@ async def generate_meme(query: str, model_choice: str, api_key: str) -> None:
 
     if model_choice == "deepseek":
         llm = ChatOpenAI(
-            base_url="https://api.deepseek.com/v1",
             model="deepseek-chat",
+            base_url="https://api.deepseek.com/v1",
             api_key=api_key,
             temperature=0.3,
         )

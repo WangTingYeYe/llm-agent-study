@@ -87,6 +87,10 @@ uv pip install -r requirements.txt
 cd ai_chess_agent
 uv pip install -r requirements.txt
 
+# AI 3D 游戏代码生成器
+cd ai_3dplaygame
+uv pip install -r requirements.txt
+
 # 或使用传统 pip（在虚拟环境中）
 pip install -r requirements.txt
 ```
@@ -128,6 +132,10 @@ pip install -r requirements.txt
 ### ♟️ [AI国际象棋代理](./ai_chess_agent/README.md)
 
 基于 AutoGen + Streamlit 构建的智能国际象棋对战系统，使用阿里云通义千问驱动两个AI代理进行自主对战。Agent White 和 Agent Black 通过 Game Master 协调，自动分析棋局、规划策略并执行移动，展示多代理协作在复杂策略游戏中的应用，支持完整的对局记录和可视化。
+
+### 🎮 [AI 3D 游戏代码生成器](./ai_3dplaygame/README.md)
+
+基于 Streamlit + Qwen API + browser-use 构建的智能 3D 游戏代码生成器，通过自然语言描述自动生成 Pygame 代码并在 Trinket.io 上运行。结合了大语言模型的代码生成能力和浏览器自动化技术，实现从创意到可视化的完整闭环，支持 3D 可视化、粒子系统等复杂游戏效果的智能生成。
 
 ## 项目结构
 
@@ -173,6 +181,11 @@ llm-agent-study/
 └── ai_chess_agent/            # AI国际象棋代理
     ├── requirements.txt
     └── ai_chess_agent.py             # 主程序文件（AutoGen + Streamlit）
+└── ai_3dplaygame/             # AI 3D 游戏代码生成器
+    ├── README.md
+    ├── requirements.txt
+    ├── ai_3dplaygame.py          # 主程序文件（Streamlit + browser-use）
+    └── agent_history.gif         # 演示动图
 ```
 
 ## 开发指南
