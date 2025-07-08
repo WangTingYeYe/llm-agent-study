@@ -51,44 +51,44 @@ source .venv/bin/activate
 ```bash
 # 安装具体项目依赖
 # 旅行规划助手
-cd travel_agent
+cd agent/travel_agent
 uv pip install -r requirements.txt
 
 # AI表情包生成器
-cd meme_generator_agent  
+cd agent/meme_generator_agent  
 uv pip install -r requirements.txt
 playwright install chromium --with-deps  # 安装浏览器驱动
 
 # AI网页爬虫
-cd ai_web_scrapping
+cd agent/ai_web_scrapping
 uv pip install streamlit scrapegraphai
 
 # AI数据分析智能体
-cd data_analysis_agent
+cd agent/data_analysis_agent
 uv pip install -r requirements.txt
 
 # AI金融分析团队
-cd ai_finance_agent_team
+cd agent/ai_finance_agent_team
 uv pip install -r requirements.txt
 
 # AI深度研究助手
-cd ai_deep_research
+cd agent/ai_deep_research
 uv pip install -r requirements.txt
 
 # AI分手治愈助手
-cd ai_breakup_recovery_agent
+cd agent/ai_breakup_recovery_agent
 uv pip install -r requirements.txt
 
 # AI博客转播客代理
-cd ai_blog_to_podcast_agent
+cd agent/ai_blog_to_podcast_agent
 uv pip install -r requirements.txt
 
 # AI国际象棋代理
-cd ai_chess_agent
+cd agent/ai_chess_agent
 uv pip install -r requirements.txt
 
 # AI 3D 游戏代码生成器
-cd ai_3dplaygame
+cd agent/ai_3dplaygame
 uv pip install -r requirements.txt
 
 # 或使用传统 pip（在虚拟环境中）
@@ -97,43 +97,43 @@ pip install -r requirements.txt
 
 ## 项目列表
 
-### 🌍 [旅行规划助手](./travel_agent/README.md)
+### 🌍 [旅行规划助手](./agent/travel_agent/README.md)
 
 基于 Agno 和 Gradio 构建的AI旅行规划助手，使用 DeepSeek 模型和百度搜索API。
 
-### 🎭 [AI表情包生成器](./meme_generator_agent/README.md)
+### 🎭 [AI表情包生成器](./agent/meme_generator_agent/README.md)
 
 基于 BrowserUse + Streamlit 构建的智能表情包生成器，通过自然语言描述自动生成个性化表情包。
 
-### 🕷️ [AI网页爬虫](./ai_web_scrapping/README.md)
+### 🕷️ [AI网页爬虫](./agent/ai_web_scrapping/README.md)
 
 基于 ScrapegraphAI + Streamlit 构建的智能网页爬虫工具，通过自然语言描述自动提取网页内容。
 
-### 📊 [AI数据分析智能体](./data_analysis_agent/README.md)
+### 📊 [AI数据分析智能体](./agent/data_analysis_agent/README.md)
 
 基于 Streamlit 和 Agno 构建的 AI 数据分析智能体，支持 Excel 和 CSV 文件上传，使用 DeepSeek 模型进行数据分析。提供 Pandas 和 DuckDB 两个版本，满足不同复杂度的数据分析需求。
 
-### 💰 [AI金融分析团队](./ai_finance_agent_team/README.md)
+### 💰 [AI金融分析团队](./agent/ai_finance_agent_team/README.md)
 
 基于 Agno 多 Agent 系统和 Streamlit 的智能金融分析平台，使用阿里云通义千问提供强大的中文金融分析能力。Web Agent 负责搜索最新新闻，Finance Agent 负责财务数据分析，两个 Agent 协同工作生成全面的投资研究报告。
 
-### 🔬 [AI深度研究助手](./ai_deep_research/README.md)
+### 🔬 [AI深度研究助手](./agent/ai_deep_research/README.md)
 
 基于 Qwen API 和 Agno 框架的智能研究分析平台，集成深度网络研究和内容阐述功能。使用 Firecrawl 进行全面的网络信息收集，支持参数化配置（深度、时间、URL数量），提供 Research Agent 和 Elaboration Agent 双重智能体协同工作，生成专业的研究报告和深度分析。
 
-### 💔 [AI分手治愈助手](./ai_breakup_recovery_agent/README.md)
+### 💔 [AI分手治愈助手](./agent/ai_breakup_recovery_agent/README.md)
 
 基于 Agno 和 Streamlit 构建的智能分手治愈助手，使用阿里云通义千问 Qwen Omni 模型提供全方位的分手恢复支持。通过四个专业的AI代理（情感支持、结束指导、恢复计划、客观建议）协同工作，为用户提供温暖贴心的分手恢复方案，支持流式响应和多模态输入。
 
-### 🎙️ [AI博客转播客代理](./ai_blog_to_podcast_agent/README.md)
+### 🎙️ [AI博客转播客代理](./agent/ai_blog_to_podcast_agent/README.md)
 
 基于 Agno + Streamlit 构建的智能播客生成器，使用阿里云通义千问和 ElevenLabs 语音合成技术。通过 Firecrawl 抓取博客内容，AI 智能总结并转换为自然流畅的播客音频，支持多语言语音合成，让文字内容瞬间变成可听的播客节目。
 
-### ♟️ [AI国际象棋代理](./ai_chess_agent/README.md)
+### ♟️ [AI国际象棋代理](./agent/ai_chess_agent/README.md)
 
 基于 AutoGen + Streamlit 构建的智能国际象棋对战系统，使用阿里云通义千问驱动两个AI代理进行自主对战。Agent White 和 Agent Black 通过 Game Master 协调，自动分析棋局、规划策略并执行移动，展示多代理协作在复杂策略游戏中的应用，支持完整的对局记录和可视化。
 
-### 🎮 [AI 3D 游戏代码生成器](./ai_3dplaygame/README.md)
+### 🎮 [AI 3D 游戏代码生成器](./agent/ai_3dplaygame/README.md)
 
 基于 Streamlit + Qwen API + browser-use 构建的智能 3D 游戏代码生成器，通过自然语言描述自动生成 Pygame 代码并在 Trinket.io 上运行。结合了大语言模型的代码生成能力和浏览器自动化技术，实现从创意到可视化的完整闭环，支持 3D 可视化、粒子系统等复杂游戏效果的智能生成。
 
@@ -143,49 +143,58 @@ pip install -r requirements.txt
 llm-agent-study/
 ├── README.md              # 项目主文档
 ├── .gitignore            # Git 忽略规则
+├── LICENSE               # 许可证文件
 ├── .venv/                # 虚拟环境（使用 uv 创建）
-├── travel_agent/         # 旅行规划助手子项目
-│   ├── README.md
-│   ├── requirements.txt
-│   └── *.py
-├── meme_generator_agent/  # AI表情包生成器
-│   ├── README.md
-│   ├── requirements.txt
-│   └── ai_meme_generator_agent.py  # 主程序（Streamlit版本）
-├── data_analysis_agent/  # AI数据分析智能体
-│   ├── README.md
-│   ├── requirements.txt
-│   ├── app.py            # Pandas版本主程序
-│   └── app_duckdb.py     # DuckDB版本主程序
-├── ai_web_scrapping/     # AI网页爬虫
-│   ├── README.md
-│   └── ai_web_scrapping.py  # 主程序
-├── ai_finance_agent_team/  # AI金融分析团队
-│   ├── README.md
-│   ├── requirements.txt
-│   ├── agent_team.py        # 核心 Agent 团队逻辑
-│   └── streamlit_app.py     # Streamlit Web 界面
-├── ai_deep_research/       # AI深度研究助手
-│   ├── README.md
-│   ├── requirements.txt
-│   ├── agent.py            # 深度研究工具
-│   ├── streamlit_app.py    # Streamlit 主应用
-│   └── run.sh              # 启动脚本
-├── ai_breakup_recovery_agent/  # AI分手治愈助手
-│   ├── README.md
-│   ├── requirements.txt
-│   └── ai_breakup_recovery_agent.py  # 主程序文件
-├── ai_blog_to_podcast_agent/  # AI博客转播客代理
-│   ├── requirements.txt
-│   └── blog_to_podcast_agent.py      # 主程序文件（Streamlit版本）
-└── ai_chess_agent/            # AI国际象棋代理
-    ├── requirements.txt
-    └── ai_chess_agent.py             # 主程序文件（AutoGen + Streamlit）
-└── ai_3dplaygame/             # AI 3D 游戏代码生成器
-    ├── README.md
-    ├── requirements.txt
-    ├── ai_3dplaygame.py          # 主程序文件（Streamlit + browser-use）
-    └── agent_history.gif         # 演示动图
+├── agent/                # AI 智能体项目集合
+│   ├── travel_agent/         # 旅行规划助手子项目
+│   │   ├── README.md
+│   │   ├── requirements.txt
+│   │   └── *.py
+│   ├── meme_generator_agent/  # AI表情包生成器
+│   │   ├── README.md
+│   │   ├── requirements.txt
+│   │   └── ai_meme_generator_agent.py  # 主程序（Streamlit版本）
+│   ├── data_analysis_agent/  # AI数据分析智能体
+│   │   ├── README.md
+│   │   ├── requirements.txt
+│   │   ├── app.py            # Pandas版本主程序
+│   │   └── app_duckdb.py     # DuckDB版本主程序
+│   ├── ai_web_scrapping/     # AI网页爬虫
+│   │   ├── README.md
+│   │   └── ai_web_scrapping.py  # 主程序
+│   ├── ai_finance_agent_team/  # AI金融分析团队
+│   │   ├── README.md
+│   │   ├── requirements.txt
+│   │   ├── agent_team.py        # 核心 Agent 团队逻辑
+│   │   └── streamlit_app.py     # Streamlit Web 界面
+│   ├── ai_deep_research/       # AI深度研究助手
+│   │   ├── README.md
+│   │   ├── requirements.txt
+│   │   ├── agent.py            # 深度研究工具
+│   │   ├── streamlit_app.py    # Streamlit 主应用
+│   │   └── run.sh              # 启动脚本
+│   ├── ai_breakup_recovery_agent/  # AI分手治愈助手
+│   │   ├── README.md
+│   │   ├── requirements.txt
+│   │   └── ai_breakup_recovery_agent.py  # 主程序文件
+│   ├── ai_blog_to_podcast_agent/  # AI博客转播客代理
+│   │   ├── requirements.txt
+│   │   └── blog_to_podcast_agent.py      # 主程序文件（Streamlit版本）
+│   ├── ai_chess_agent/            # AI国际象棋代理
+│   │   ├── requirements.txt
+│   │   └── ai_chess_agent.py             # 主程序文件（AutoGen + Streamlit）
+│   ├── ai_3dplaygame/             # AI 3D 游戏代码生成器
+│   │   ├── README.md
+│   │   ├── requirements.txt
+│   │   ├── ai_3dplaygame.py          # 主程序文件（Streamlit + browser-use）
+│   │   └── agent_history.gif         # 演示动图
+│   └── ai_tic_tac_toe_game_agent/ # AI井字棋游戏代理
+│       ├── agent.py
+│       ├── app.py
+│       ├── requirements.txt
+│       └── utils.py
+├── rag/                  # RAG (检索增强生成) 相关项目
+└── .yoyo/                # Yoyo 配置文件
 ```
 
 ## 开发指南
