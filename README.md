@@ -91,6 +91,10 @@ uv pip install -r requirements.txt
 cd agent/ai_3dplaygame
 uv pip install -r requirements.txt
 
+# 简单的PDF RAG应用程序
+cd rag/simple_rag_for_pdf
+uv pip install -r requirements.txt
+
 # 或使用传统 pip（在虚拟环境中）
 pip install -r requirements.txt
 ```
@@ -136,6 +140,10 @@ pip install -r requirements.txt
 ### 🎮 [AI 3D 游戏代码生成器](./agent/ai_3dplaygame/README.md)
 
 基于 Streamlit + Qwen API + browser-use 构建的智能 3D 游戏代码生成器，通过自然语言描述自动生成 Pygame 代码并在 Trinket.io 上运行。结合了大语言模型的代码生成能力和浏览器自动化技术，实现从创意到可视化的完整闭环，支持 3D 可视化、粒子系统等复杂游戏效果的智能生成。
+
+### 📚 [简单的PDF RAG应用程序](./rag/simple_rag_for_pdf/README.md)
+
+基于阿里百炼 DashScope 和 LangChain 框架构建的智能PDF问答系统。通过先进的RAG（检索增强生成）技术，支持PDF文档上传、智能预处理、向量化存储和精准问答。提供现代化的Streamlit Web界面，支持拖拽上传、实时进度显示、聊天历史记录等功能。包含完整的PDF预处理系统，能够自动清理文本、移除页眉页脚、优化文档结构，显著提升问答准确性。
 
 ## 项目结构
 
@@ -194,6 +202,10 @@ llm-agent-study/
 │       ├── requirements.txt
 │       └── utils.py
 ├── rag/                  # RAG (检索增强生成) 相关项目
+│   └── simple_rag_for_pdf/       # 简单的PDF RAG应用程序
+│       ├── README.md
+│       ├── requirements.txt
+│       └── streamlit_app.py          # Streamlit Web应用（主程序）
 └── .yoyo/                # Yoyo 配置文件
 ```
 
