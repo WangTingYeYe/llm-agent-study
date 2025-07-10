@@ -95,6 +95,10 @@ uv pip install -r requirements.txt
 cd rag/simple_rag_for_pdf
 uv pip install -r requirements.txt
 
+# 基于 DeepEval 的 RAG 评估
+cd rag/deepeval_rag
+uv pip install -r requirements.txt
+
 # 或使用传统 pip（在虚拟环境中）
 pip install -r requirements.txt
 ```
@@ -144,6 +148,10 @@ pip install -r requirements.txt
 ### 📚 [简单的PDF RAG应用程序](./rag/simple_rag_for_pdf/README.md)
 
 基于阿里百炼 DashScope 和 LangChain 框架构建的智能PDF问答系统。通过先进的RAG（检索增强生成）技术，支持PDF文档上传、智能预处理、向量化存储和精准问答。提供现代化的Streamlit Web界面，支持拖拽上传、实时进度显示、聊天历史记录等功能。包含完整的PDF预处理系统，能够自动清理文本、移除页眉页脚、优化文档结构，显著提升问答准确性。
+
+### 🔬 [基于 DeepEval 和通义千问的 RAG 评估](./rag/deepeval_rag/README.md)
+
+一个完整的示例，展示了如何利用 `deepeval` 框架对一个基于 LangChain 和通义千问大模型的 RAG (Retrieval-Augmented Generation) 应用进行自动化评估。
 
 ## 项目结构
 
@@ -202,10 +210,19 @@ llm-agent-study/
 │       ├── requirements.txt
 │       └── utils.py
 ├── rag/                  # RAG (检索增强生成) 相关项目
-│   └── simple_rag_for_pdf/       # 简单的PDF RAG应用程序
+│   ├── simple_rag_for_pdf/       # 简单的PDF RAG应用程序
+│   │   ├── README.md
+│   │   ├── requirements.txt
+│   │   └── streamlit_app.py          # Streamlit Web应用（主程序）
+│   └── deepeval_rag/           # 基于 DeepEval 的 RAG 评估
 │       ├── README.md
 │       ├── requirements.txt
-│       └── streamlit_app.py          # Streamlit Web应用（主程序）
+│       ├── company_information.txt
+│       ├── qa_agent.py
+│       ├── dashscope_config.py
+│       ├── dataset_generate.py
+│       ├── test_qa_agent.py
+│       └── test_app.py
 └── .yoyo/                # Yoyo 配置文件
 ```
 
