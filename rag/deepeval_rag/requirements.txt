@@ -1,0 +1,9 @@
+deepeval
+langchain-openai
+langchain-core
+langchain-community
+numpy
+langchain-text-splitters
+dashscope
+chroma-hnswlib
+faiss-cpu
